@@ -12,7 +12,7 @@
     --text-color: #fff;
     --main-color: #ae8957;
 
-    --big-font: 6-6rem;
+    --big-font: 5rem;
     --p-font: 1rem;
 }
 
@@ -83,4 +83,104 @@ header{
     z-index: 10001;
     cursor: pointer;
     margin-left: 25px;
+    display: none;
+}
+
+section{
+    padding: 0 14%;
+}
+
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(img/bg.png);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-img img{
+    width: 100%;
+    height: auto;
+}
+
+.hero-text h1{
+    font-size: var(--big-font);
+    margin: 15px;
+}
+
+.hero-text h5{
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.hero-text p{
+    width: 100%;
+    max-width: 620px;
+    font-size: var(--p-font);
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 40px;
+}
+
+.main-hero{
+    display: flex;
+    align-items: center;
+}
+
+.btn{
+    display: inline-block;
+    padding: 13px 32px;
+    background: var(--main-color);
+    border: 2px solid transparent;
+    border-radius: 7px;
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: 20px;
+    transition: all .6s ease;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+.price{
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.price span{
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--main-color);
+    margin-left: 15px;
+}
+
+.icons{
+    position: absolute;
+    top: 50%;
+    padding: 0 7%;
+    transform: translateY(-50px);
+}
+
+.icons i{
+    display: block;
+    margin: 20px 0;
+    color: var(--text-color);
+    font-size: 23px;
+    transition: all .6s ease;
+}
+
+.icons i:hover{
+    transform: translateY(-5px);
+    color: var(--main-color);
 }
