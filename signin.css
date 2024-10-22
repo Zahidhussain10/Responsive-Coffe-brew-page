@@ -1,0 +1,86 @@
+ /* Inline CSS for specific styles */
+ body {
+    font-family: 'roboto', sans-serif;
+    background-color: black; /* Fallback black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    animation: fadeIn 1s ease-in-out; /* Animation for landing */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Slide in from above */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.signin-container {
+    position: relative; /* Position relative for background image */
+    background: rgba(252, 250, 250, 0.132); /* Glass effect */
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(100px);
+    width: 300px;
+    text-align: center;
+    color: white;
+}
+
+.signin-container::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    left: -200px;
+    bottom: -200px;
+    background: url('img/hero.png') no-repeat center center; /* Hero image */
+    background-size: cover; /* Cover the background */
+    opacity: 0.5; /* Adjust opacity for visibility */
+    border-radius: 15px; /* Match the border radius */
+    z-index: -1; /* Place behind the container */
+}
+
+.signin-container h1 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.signin-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.signin-container input[type="text"],
+.signin-container input[type="tel"],
+.signin-container input[type="password"] {
+    background: rgba(3, 3, 3, 0.2);
+    color: rgb(11, 11, 11);
+}
+
+.signin-container button {
+    background-color: #f2c94c; /* Button color */
+    color: #333;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.signin-container button:hover {
+    background-color: #e3a619; /* Darker shade on hover */
+}
